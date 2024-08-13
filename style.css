@@ -1,0 +1,274 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #121212;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* default button style */
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: black;
+  background-color: #ff7300;
+}
+button:hover{
+  background-color: #ff8624;
+  transition-duration: 0.3s;
+}
+
+.app {
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+  color: white;
+  align-items: center;
+}
+
+/* the 'To Do' heading */
+.banner{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+.banner .to{
+  margin-right: 4px;
+}
+.banner .do{
+  color: black;
+  padding: 0px 4px;
+  background-color: #ff7300;
+  border-radius: 4px;
+}
+
+/* The input header */
+.input-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0px 0px 10px 0px;
+}
+.input-header h3{
+  margin-top: 0px;
+  font-weight: medium;
+  font-size: 16px;
+}
+
+/* Box to appear when the list is empty */
+.emptybox{
+  background-color: #141414;
+  font-size: 12px;
+  font-weight: lighter;
+  padding: 50px 0px;
+  border-radius: 8px;
+  text-align: center;
+}
+.emptybox h3{
+  font-size: 20px;
+  color: #696969;
+}
+
+/* Div containing the completed heading and clear all button */
+.completedtitle{
+  display: flex;
+  flex-direction: row;
+}
+.completedHeading{
+  font-weight: bold;
+  width: 574px;
+  max-width: 574px;
+}
+
+/* Complete box containing the completed tasks */
+.completedbox{
+  display: flex;
+  flex-direction: row;
+  background-color: #141414;
+  font-size: 14px;
+  padding: 8px;
+  padding-bottom: 30px;
+  border-radius: 8px;
+}
+.completedbox h3{
+  font-weight: 300;
+  color: #696969;
+}
+.completedbox .completedtask{
+  width: 700px;
+  max-width: 700px;
+}
+.completedbox .delete-button{
+  align-self: right;
+}
+
+/* the input box */
+.to-do-input input {
+  color: white;
+  background-color: #1a1a1a;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+/* the button next to the input box */
+.to-do-input button {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* The list of tasks */
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+  background-color: #121212;
+}
+
+/* making the cursor a ointer when the user hovers over the icons*/
+.to-do-list i {
+  cursor: pointer;
+}
+
+/* defining a base size for 'tickmark' and 'edit' */
+.fa-solid{
+  font-size: 16px;
+}
+
+/* defining the color and hover animation for the 'edit' icon */
+.to-do-list .fa-pen-to-square {
+  color: gray ;
+}
+}
+.to-do-list .fa-pen-to-square:hover {
+  color: #c2c2c2;
+  font-size: 18px;
+  transition-duration: 0.3s;
+}
+
+/* defining the color and hover animation for the 'tickmark' icon */
+.to-do-list .fa-check {
+  color: green;
+}
+.to-do-list .fa-check:hover {
+  color: #55d855;
+  font-size: 18px;
+  transition-duration: 0.3s;
+}
+
+/* defining the color and hover animation for the 'trash can' icon */
+.completedbox .fa-trash-can{
+  color: #9d1a10;
+}
+.completedbox .fa-trash-can:hover {
+  color: red;
+  font-size: 18px;
+  transition-duration: 0.3s;
+}
+
+/* this icon has been omitted out due to some issue */
+/* defining the color and hover animation for the 'Broom' icon for clear all */
+.completedtitle .clearallBtn{
+color: #ff7300;                    /* <i class="fa-solid fa-broom clearallBtn"></i>  */
+}
+.completedtitle .clearallBtn:hover {
+  color: red;
+  font-size: 16px;
+  transition-duration: 0.3s;
+}
+
+/* The save and cancel button */
+.to-do-list button {
+  padding:8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.input-controller {
+  display: flex;
+  gap: 10px;
+}
+
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 1.4;
+  color: white;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.30s ease-in-out;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px white;
+}
+
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+.update-controller {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .app {
+    width: 95%;
+    text-align: center;
+  }
+
+  .input-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .to-do-input {
+    display: flex;
+  }
+
+  .to-do-input input {
+    width: 300px;
+  }
+
+}
